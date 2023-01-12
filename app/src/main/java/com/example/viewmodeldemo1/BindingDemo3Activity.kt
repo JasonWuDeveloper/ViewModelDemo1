@@ -11,11 +11,12 @@ class BindingDemo3Activity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_binding_demo3)
-        val student: Student = getStudent()
-        with(binding) {
-            tvEmail.text = student.email
-            tvName.text = student.name
-        }
+        binding.student = getStudent()
+//        val student: Student = getStudent()
+//        with(binding) {
+//            tvEmail.text = student.email
+//            tvName.text = student.name
+//        }
     }
 
     private fun getStudent():Student {
